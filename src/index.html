@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/output-min.css" />
+    <link rel="stylesheet" href="../dist/all.css" />
+  </head>
+  <body class="rtl w-full h-full m-0 p-0 overflow-x-hidden">
+    <header class="bg-slate-800 w-full text-white">
+      <div class="mx-auto flex items-center justify-between p-4 relative">
+        <div class="flex items-center gap-4">
+          <img
+            class="w-20 h-10"
+            src="../images/aklogot.png"
+            alt="AlfKanz logo"
+          />
+          <p class="text-4xl mr-4  font-custom">الف کنز</p>
+        </div>
+
+        <nav class="hidden mx-5 md:flex items-center gap-6 lg:gap-10">
+          <a
+            href="#"
+            class="text-xl text-white no-underline hover:text-sky-300"
+            >خانه</a
+          >
+
+          <div class="relative group">
+            <div class="flex items-center cursor-pointer">
+              <p class="text-lg hover:text-sky-300">خرید خانه در دبی</p>
+              <i class="fa-solid fa-caret-down ml-2"></i>
+            </div>
+
+            <div
+              class="absolute left-0 top-full mt-2 bg-blue-200 shadow-lg rounded-lg w-max z-50 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 max-h-[250px] overflow-y-auto"
+            >
+              <ul class="min-w-[150px] list-none">
+                <li class="px-4 py-2">
+                  <a href="#" class="no-underline text-lg text-black"
+                    >آپارتمان</a
+                  >
+                </li>
+                <li class="px-4 py-2">
+                  <a href="#" class="no-underline text-lg text-black">ویلا</a>
+                </li>
+                <li class="px-4 py-2">
+                  <a href="#" class="no-underline text-lg text-black"
+                    >تاون هاوس</a
+                  >
+                </li>
+                <li class="px-4 py-2">
+                  <a href="#" class="no-underline text-lg text-black"
+                    >پنت هاوس</a
+                  >
+                </li>
+                <li class="px-4 py-1">
+                  <a href="#" class="no-underline text-lg text-black">دوبلکس</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <a
+            href="#"
+            class="text-xl text-white no-underline hover:text-sky-300"
+            >وبلاگ</a
+          >
+          <a
+            href="#"
+            class="text-xl text-white no-underline hover:text-sky-300"
+            >تماس با ما</a
+          >
+        </nav>
+
+        <button id="menu-btn" class="md:hidden bg-green-400 p-2 rounded-lg">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-slate-800 bg-opacity-95 hidden flex flex-col items-center space-y-4 p-4 z-50"
+      >
+        <button
+          id="close-menu"
+          class="absolute top-4 right-4 text-red-500 rounded-lg text-2xl"
+        >
+          ✖
+        </button>
+
+        <a href="#" class="no-underline text-lg text-white">خانه</a>
+
+        <div class="w-full text-center">
+          <p class="text-lg cursor-pointer" id="mobile-dropdown-btn">
+            خرید خانه در دبی ▼
+          </p>
+          <div
+            id="mobile-dropdown"
+            class="hidden bg-blue-200 no-underline mt-2 shadow-lg rounded-lg w-full max-h-[250px] overflow-y-auto"
+          >
+            <ul class="min-w-[150px] list-none no-underline">
+              <li class="px-4 py-1">
+                <a href="#" class="no-underline text-lg text-white">آپارتمان</a>
+              </li>
+              <li class="px-4 py-2"><a href="#" class="no-underline text-lg text-white">ویلا</a></li>
+              <li class="px-4 py-2 ">
+                <a href="#" class="no-underline text-lg text-white">تاون هاوس</a>
+              </li>
+              <li class="px-4 py-2 ">
+                <a href="#" class="no-underline text-lg text-white">پنت هاوس</a>
+              </li>
+              <li class="px-4 py-2">
+                <a href="#" class="no-underline text-lg text-white">دوبلکس</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#" class="text-lg text-white no-underline">وبلاگ</a>
+        <a href="#" class="text-lg text-white no-underline">تماس با ما</a>
+      </div>
+    </header>
+
+    <main class="w-full overflow-x-hidden">
+      <div class="mx-4 mt-1 bg-white shadow-lg flex flex-col">
+        <img
+          class="w-full h-72 md:h-80 lg:h-[60vh] object-cover rounded-md"
+          src="../images/khalifeh.webp"
+          alt="تصویر نمونه"
+        />
+      </div>
+
+      <div class="w-full flex flex-col md:flex-row items-center">
+        <div class="w-full flex flex-col justify-center text-center p-6">
+          <h2 class="text-xl font-custom p-6">
+            شرکت الف کنز؛ تجربه‌ای مطمئن در خرید و فروش ملک در دبی
+          </h2>
+          <p
+            class="text-xl font-custom text-justify lg:text-xl p-6 leading-10 mt-4"
+          >
+            شرکت الف کنز با سال‌ها تجربه در خرید و فروش ملک در دبی، یکی از
+            معتبرترین مجموعه‌های مشاوره املاک در این شهر محسوب می‌شود. این شرکت
+            با تکیه بر تیمی از مشاوران متخصص و حرفه‌ای، به مشتریان خود در یافتن
+            بهترین فرصت‌های سرمایه‌گذاری و خرید خانه در دبی کمک می‌کند.
+            <br /><br />
+            این مجموعه، انواع روش‌های خرید ملک در دبی از جمله پیش‌خرید پروژه‌های
+            در حال ساخت و خرید نقدی یا اقساطی واحدهای آماده را پوشش می‌دهد. با
+            دانش عمیق از مناطق مختلف دبی مانند بیزینس بی، دبی مارینا و جمیرا
+            ویلیج سرکل، مشاوران الف کنز به شما کمک می‌کنند تا بهترین تصمیم را
+            برای سرمایه‌گذاری در املاک دبی بگیرید.
+          </p>
+        </div>
+
+        <div
+          class="w-[calc(100%-15px)] sm:w-full mx-4 flex justify-center text-center items-center p-8"
+        >
+          <img
+            src="../images/khalifeh2.webp"
+            alt="image"
+            class="w-[calc(100%-40px)] justify-center object-center h-96 rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
+
+      <div class="p-6 container w-full max-w-full mx-auto bg-white">
+        <h2
+          class="text-xl text-center p-6 ml-8 h-13 bg-gray-300 rounded-xl md:text-2xl font-custom"
+        >
+          لیست املاک مجموعه الف کنز | خرید و فروش آپارتمان، ویلا، تاون هاوس، پنت
+          هاوس و دوبلکس در دبی
+        </h2>
+        <p
+          class="text-xl font-custom p-6 ml-8 mb-4 text-justify lg:text-xl leading-7"
+        >
+          مجموعه الف کنز با ارائه لیست کاملی از املاک مسکونی و تجاری در دبی،
+          بهترین فرصتهای سرمایه گذاری و خرید ملک در دبی را برای شما فراهم میکند.
+          ما مجموعهای از آپارتمانهای مدرن در داونتاون دبی و جمیرا لیک تاورز
+          (JLT)، ویلاهای لوکس در پالم جمیرا و دبی هیلز، تاونهاوسهای خانوادگی در
+          داماک هیلز و میدان، پنتهاوسهای لاکچری در مارینا و بیزینس بی و همچنین
+          دوبلکسهای شیک در بلوواترز و جمیرا بیچ رزیدنس (JBR) را با بهترین قیمت
+          ارائه میدهیم. لیست املاک مجموعه الف کنز | خرید و فروش آپارتمان، ویلا،
+          تاونهاوس، پنتهاوس و دوبلکس در دبی مجموعه الف کنز با ارائه لیست کاملی
+          از املاک مسکونی و تجاری در دبی، بهترین فرصتهای سرمایهگذاری و خرید ملک
+          در دبی را برای شما فراهم میکند. ما مجموعهای از آپارتمانهای مدرن در
+          داونتاون دبی و جمیرا لیک تاورز (JLT)، ویلاهای لوکس در پالم جمیرا و دبی
+          هیلز، تاونهاوسهای خانوادگی در داماک هیلز و میدان، پنتهاوسهای لاکچری در
+          مارینا و بیزینس بی و همچنین دوبلکسهای شیک در بلوواترز و جمیرا بیچ
+          رزیدنس (JBR) را با بهترین قیمت ارائه میدهیم.
+        </p>
+      </div>
+      <div class="w-full mt-4 py-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+          <a
+            href="/details/1"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/1.jpg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-custom text-black">املاک شماره1</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به املاک شماره 1 است.
+              </p>
+              <p class="text-gray-600 font-custom">
+                جزئیات بیشتر درباره این املاک...
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="/details/2"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/2.jpeg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-custom text-black">املاک شماره2</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به املاک شماره 2 است.
+              </p>
+              <p class="text-gray-600 font-custom">
+                جزئیات بیشتر درباره این املاک...
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="/details/3"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/3.jpg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-custom text-black">املاک شماره3</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به املاک شماره 3 است.
+              </p>
+              <p class="text-gray-600 font-custom">
+                جزئیات بیشتر درباره این املاک...
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="/details/4"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/2.jpeg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-custom text-black">املاک شماره4</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به املاک شماره 4 است.
+              </p>
+              <p class="text-gray-600 font-custom">
+                جزئیات بیشتر درباره این املاک...
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="/details/5"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/1.jpg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-custom text-black">املاک شماره5</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به املاک شماره 5 است.
+              </p>
+              <p class="text-gray-600 font-custom">
+                جزئیات بیشتر درباره این املاک...
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="/details/6"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/3.jpg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-custom text-black">املاک شماره6</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به املاک شماره 6 است.
+              </p>
+              <p class="text-gray-600 font-custom">
+                جزئیات بیشتر درباره این املاک...
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="mx-4">
+        <img
+          src="../images/4.jpeg"
+          alt="تصویر پس‌زمینه"
+          class="w-full h-80   rounded-lg"
+        />
+      </div>
+
+      <div class="w-full bg-white mx-auto">
+        <div class="w-full overflow-x-hidden rounded-2xl">
+          <h1
+            class="text-xl p-6 font-custom text-center h-13 bg-gray-300 rounded-lg mx-4"
+          >
+            راهنمای کامل خرید ملک در دبی با مشاوره تخصصی شرکت الف کنز
+          </h1>
+
+          <p class="font-custom text-xl leading-10 p-6 text-justify lg:text-xl">
+            دبی، به عنوان یکی از پیشرفته‌ترین و پویاترین شهرهای جهان، فرصت‌های
+            بی‌نظیری را برای سرمایه‌گذاران ملکی فراهم کرده است. این شهر با
+            اقتصاد پایدار، زیرساخت‌های مدرن و قوانین شفاف سرمایه‌گذاری، یکی از
+            محبوب‌ترین مقاصد برای خرید ملک و اخذ اقامت امارات محسوب می‌شود.
+          </p>
+
+          <h2
+            class="text-xl font-custom p-6 h-13 bg-gray-300 rounded-lg mx-4 text-center"
+          >
+            روش‌های متنوع خرید ملک در دبی
+          </h2>
+          <p class="text-xl font-custom leading-10 p-6 text-justify">
+            روش‌های مختلفی برای خرید ملک در دبی وجود دارد که بسته به شرایط مالی
+            و اهداف سرمایه‌گذاری شما متفاوت است. از جمله محبوب‌ترین روش‌ها
+            می‌توان به پیش‌خرید پروژه‌های در حال ساخت اشاره کرد که امکان خرید با
+            پرداخت اقساطی و قیمت‌های مقرون‌به‌صرفه‌تر را فراهم می‌کند.<br />
+            همچنین، خریداران می‌توانند واحدهای آماده در مناطق لوکس دبی مانند
+            داون‌تاون دبی، بیزینس بی، دبی مارینا، پالم جمیرا و جمیرا ویلیج سرکل
+            را به‌صورت نقدی یا اقساطی خریداری کنند.
+          </p>
+
+          <h2
+            class="text-xl mx-4 h-13 p-6 font-custom bg-gray-300 rounded-lg text-center"
+          >
+            اخذ اقامت امارات از طریق خرید ملک
+          </h2>
+          <ul class="list-disc pl-6 font-custom">
+            <li class="font-custom text-xl">
+              اقامت دو ساله برای خرید ملک با ارزش ۷۵۰ هزار درهم
+            </li>
+            <li class="font-custom text-xl">
+              اقامت طلایی ۱۰ ساله برای خرید ملک با ارزش ۲ میلیون درهم
+            </li>
+          </ul>
+
+          <h2
+            class="text-xl h-13 p-6 mx-4 font-custom mt-6 bg-gray-300 rounded-lg m-1 text-center mb-4"
+          >
+            مزایای خرید ملک در دبی
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div
+              class="bg-gray-100 p-4 font-custom text-xl rounded-lg h-13 mx-4"
+            >
+              ✅ عدم وجود مالیات بر درآمد و اجاره ملک
+            </div>
+            <div
+              class="bg-gray-100 p-4 rounded-lg font-custom text-xl h-13 mx-4"
+            >
+              ✅ رشد پایدار ارزش املاک و بازدهی بالا
+            </div>
+            <div
+              class="bg-gray-100 p-4 rounded-lg font-custom text-xl h-13 mx-4"
+            >
+              ✅ امکان خرید اقساطی و دریافت وام مسکن برای خارجی‌ها
+            </div>
+            <div
+              class="bg-gray-100 p-4 rounded-lg font-custom text-xl h-13 mx-4"
+            >
+              ✅ سبک زندگی لوکس و امکانات رفاهی در سطح جهانی
+            </div>
+          </div>
+
+          <h2
+            class="text-xl mt-6 h-13 mx-4 font-custom bg-gray-300 rounded-lg p-6 text-center"
+          >
+            چرا شرکت الف کنز؟
+          </h2>
+          <p class="p-6 leading-10 font-custom text-xl text-justify">
+            اگر به دنبال مشاوره تخصصی برای خرید ملک در دبی هستید، شرکت الف کنز
+            با سابقه‌ای درخشان در زمینه خرید و فروش املاک در امارات، گزینه‌ای
+            ایده‌آل برای شماست. این مجموعه با بهره‌گیری از مشاوران حرفه‌ای و
+            آگاه به بازار املاک دبی، شما را در تمامی مراحل خرید، سرمایه‌گذاری و
+            دریافت اقامت همراهی می‌کند. خرید ملک در دبی یک فرصت طلایی برای
+            سرمایه‌گذاری مطمئن و آینده‌ای روشن در امارات است. برای دریافت مشاوره
+            رایگان و بررسی بهترین گزینه‌های خرید، با مشاوران شرکت الف کنز تماس
+            بگیرید و مسیر سرمایه‌گذاری خود را با اطمینان آغاز کنید.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full bg-white">
+        <h1
+          class="text-xl bg-gray-300 rounded-lg text-center p-2 mx-4 font-custom"
+        >
+          مشاوران املاک الف کنز | خرید و فروش خانه در دبی با بهترین شرایط
+          <br />
+          بهترین مشاوران املاک در دبی برای خرید و فروش خانه
+        </h1>
+      </div>
+
+      <div class="mt-8 space-y-6">
+        <p class="font-custom text-justify p-6 leading-10 text-xl">
+          اگر به دنبال خرید خانه در دبی هستید یا قصد سرمایه‌گذاری در بازار املاک
+          دبی را دارید، مشاوران حرفه‌ای شرکت الف کنز آماده ارائه خدماتی مطمئن و
+          شفاف به شما هستند. ما با سال‌ها تجربه در بازار املاک و مستغلات دبی،
+          شما را در مسیر خرید، فروش و سرمایه‌گذاری موفق راهنمایی می‌کنیم.
+        </p>
+
+        <h2
+          class="text-xl mx-4 p-6 font-custom text-center bg-gray-300 rounded-lg h-13"
+        >
+          چرا مشاوران الف کنز را برای خرید ملک در دبی انتخاب کنید؟
+        </h2>
+        <ul
+          class="list-none m-2 p-4 list-inside font-custom text-xl leading-10 space-y-2"
+        >
+          <li>
+            ✅ دسترسی به بهترین پروژه‌های مسکونی و تجاری در مناطق پرتقاضای دبی
+          </li>
+          <li>✅ مشاوره تخصصی برای خرید آپارتمان، ویلا و ملک‌های لوکس</li>
+          <li>✅ قیمت‌های رقابتی و پیشنهادات ویژه برای سرمایه‌گذاران</li>
+          <li>✅ راهنمایی کامل در مراحل حقوقی و مالی خرید خانه</li>
+          <li>✅ پشتیبانی پس از خرید برای مدیریت و بهره‌برداری از ملک</li>
+        </ul>
+
+        <h2
+          class="text-xl p-6 h-13 mx-4 font-custom bg-gray-300 rounded-lg m-1 text-center"
+        >
+          خرید خانه در دبی با شرایط ویژه
+        </h2>
+        <p class="font-custom text-justify p-6 leading-10 text-xl">
+          شرکت الف کنز به شما کمک می‌کند تا بهترین فرصت‌های خرید آپارتمان در
+          دبی، ویلاهای لوکس در پالم جمیرا، خانه‌های مدرن در داون‌تاون دبی و دیگر
+          مناطق را پیدا کنید. همچنین، اگر قصد دریافت اقامت دبی از طریق خرید ملک
+          را دارید، تیم مشاوره ما اطلاعات کامل و بروز را در اختیار شما قرار
+          خواهد داد.
+        </p>
+
+        <h2
+          class="text-xl p-6 h-13 mx-4 font-custom bg-gray-300 text-center rounded-lg"
+        >
+          فروش ملک در دبی با بیشترین سود
+        </h2>
+        <p class="font-custom text-justify p-6 leading-10 text-xl">
+          اگر قصد فروش خانه در دبی را دارید، ما با ارائه استراتژی‌های بازاریابی
+          پیشرفته و تبلیغات هدفمند، به شما کمک می‌کنیم تا در کوتاه‌ترین زمان و
+          با بالاترین قیمت، ملک خود را به فروش برسانید.
+        </p>
+      </div>
+
+      <div class="mt-0">
+        <p class="text-xl font-custom text-justify px-6">
+          همین امروز با ما تماس بگیرید!
+        </p>
+        <p class="font-custom text-xl px-6 leading-10 text-justify">
+          با مشاوران حرفه‌ای الف کنز همراه شوید و بهترین تجربه خرید و فروش ملک
+          در دبی را داشته باشید.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 mx-4 w-full h-fit bg-white"
+      >
+        <div
+          class="bg-white shadow-lg rounded-2xl p-2 flex flex-col items-center text-center w-5/6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-sky-200 hover:shadow-2xl"
+        >
+          <img
+            src="../images/m2.jpg"
+            alt="Person Name"
+            class="w-full h-fit rounded-md object-center mb-4"
+          />
+          <h3 class="text-xl font-custom mb-2">فرزانه حسن زاده</h3>
+          <div class="flex flex-col items-center gap-2">
+            <p>971568842000+</p>
+            <a
+              href="mailto:YOUR_EMAIL"
+              class="flex items-center text-gray-700 hover:text-blue-500"
+            >
+              <span class="mr-2">📧</span> farzanehassazande4@gmail.com
+            </a>
+            <a
+              href="https://www.instagram.com/farzane_hassanzade?igsh=MXU2dTNxMGtncWU0eA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center text-gray-700 hover:text-pink-500"
+            >
+              <span class="mr-2">📷</span> Instagram
+            </a>
+          </div>
+        </div>
+        <div
+          class="bg-white shadow-lg rounded-2xl p-2 flex flex-col items-center text-center w-5/6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-sky-200 hover:shadow-2xl"
+        >
+          <img
+            src="../images/m3.jpg"
+            alt="Person Name"
+            class="w-full h-fit rounded-md object-cover mb-4"
+          />
+          <h3 class="text-xl font-custom mb-2">احمد زارعی</h3>
+          <div class="flex flex-col items-center gap-2">
+            <p>0568626000</p>
+            <a
+              href="mailto:YOUR_EMAIL"
+              class="flex items-center text-gray-700 hover:text-blue-500"
+            >
+              <span class="mr-2">📧</span> Ahmadzarei19850105@gmail.com
+            </a>
+            <a
+              href="https://www.instagram.com/ahmadzarei.dubai?igsh=ZWFzMXY1ZHRuYWxk"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center text-gray-700 hover:text-pink-500"
+            >
+              <span class="mr-2">📷</span> Instagram
+            </a>
+          </div>
+        </div>
+        <div
+          class="bg-white shadow-lg rounded-2xl p-2 flex flex-col items-center text-center w-5/6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-sky-200 hover:shadow-2xl"
+        >
+          <img
+            src="../images/m4.jpg"
+            alt="Person Name"
+            class="w-full h-fit rounded-md object-cover mb-4"
+          />
+          <h3 class="text-xl font-custom mb-2">ابراهیم رحمانیان</h3>
+          <div class="flex flex-col items-center gap-2">
+            <p>971567007750+</p>
+            <a
+              href="mailto:YOUR_EMAIL"
+              class="flex items-center text-gray-700 hover:text-blue-500"
+            >
+              <span class="mr-2">📧</span> ebrahim.rahmanian67@gmail.com
+            </a>
+            <a
+              href="https://www.instagram.com/dubai_properties_ir?igsh=NHZkaTV1OWpuNWE2&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center text-gray-700 hover:text-pink-500"
+            >
+              <span class="mr-2">📷</span> Instagram
+            </a>
+          </div>
+        </div>
+        <div
+          class="bg-white shadow-lg rounded-2xl p-2 flex flex-col items-center text-center w-5/6 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-sky-200 hover:shadow-2xl"
+        >
+          <div class="">
+            <img
+              src="../images/m1_resized_fixed.jpg"
+              alt="Person Name"
+              class="w-full h-fit rounded-md object-cover mb-4"
+            />
+          </div>
+          <h3 class="text-xl font-custom mb-2">محسن افساریان</h3>
+          <div class="flex flex-col items-center gap-2">
+            <p>0523956948</p>
+            <a
+              href=""
+              class="flex items-center text-gray-700 hover:text-blue-500"
+            >
+              <span class="mr-2">📧</span>Afsarianmohsen@gmail.com
+            </a>
+            <a
+              href="https://www.instagram.com/imohsen_dxb?igsh=MWw5MHQ3dGZ6azdwNA%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center text-gray-700 hover:text-pink-500"
+            >
+              <span class="mr-2">📷</span> Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="w-full 0 mt-4 mx-auto p-4 py-10">
+        <div
+          class="grid grid-cols-1 ml-6 p-2 sm:grid-cols-2 lg:grid-cols-3 gap-3"
+        >
+          <a
+            href="/details/1"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/1.jpg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-custom">وبلاگ شماره1</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به وبلاگ شماره 1 است.
+              </p>
+              <p class="text-gray-600 font-custom">ادامه...</p>
+            </div>
+          </a>
+
+          <a
+            href="/details/2"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/2.jpeg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-custom">وبلاگ شماره2</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به وبلاگ شماره 2 است.
+              </p>
+              <p class="text-gray-600 font-custom">ادامه...</p>
+            </div>
+          </a>
+
+          <a
+            href="/details/3"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/3.jpg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-custom">وبلاگ شماره 3</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به وبلاگ شماره 3 است.
+              </p>
+              <p class="text-gray-600 font-custom">ادامه...</p>
+            </div>
+          </a>
+
+          <a
+            href="/details/4"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/2.jpeg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-custom">وبلاگ شماره4</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به وبلاگ شماره 4 است.
+              </p>
+              <p class="text-gray-600 font-custom">ادامه...</p>
+            </div>
+          </a>
+
+          <a
+            href="/details/5"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/1.jpg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6 mx-4">
+              <h3 class="text-xl font-custom">وبلاگ شماره5</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به وبلاگ شماره 5 است.
+              </p>
+              <p class="text-gray-600 font-custom">ادامه...</p>
+            </div>
+          </a>
+
+          <a
+            href="/details/6"
+            class="block no-underline bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <img
+              src="../images/3.jpg"
+              alt="تصویر کارت"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="font-custom text-2xl">وبلاگ شماره6</h3>
+              <p class="text-gray-600 font-custom mt-2">
+                توضیحات مربوط به وبلاگ شماره 6 است.
+              </p>
+              <p class="text-gray-600 font-custom">ادامه...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="w-full overflow-x-hidden bg-slate-800 text-white py-4">
+      <div
+        class="max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8"
+      >
+        <div>
+          <h3 class="text-xl font-custom mr-10 mb-3">درباره ما</h3>
+          <ul class="space-y-6 list-none">
+            <li class="text-gray-400 font-custom text-xl hover:text-white">
+              <a
+                href="#"
+                class="text-gray-400 no-underline font-custom text-base hover:text-white"
+                >تیم ما</a
+              >
+            </li>
+            <li class="text-gray-400 font-custom hover:text-white">
+              <a
+                href="#"
+                class="text-gray-400 no-underline font-custom text-base hover:text-white"
+              >
+                ارتباط با ما
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-custom mr-10 mb-3">خدمات ما</h3>
+          <ul class="space-y-6 list-none">
+            <li class="text-gray-400 font-custom text-xl hover:text-white">
+              <a
+                href="#"
+                class="text-gray-400 no-underline text-base font-custom hover:text-white"
+              >
+                اجاره خانه در دبی
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 no-underline font-custom text-base hover:text-white"
+              >
+                پیش فروش خانه در دبی
+              </a>
+            </li>
+            <li c>
+              <a
+                href="#"
+                class="text-gray-400 no-underline text-base font-custom hover:text-white"
+              >
+                فروش خانه در دبی
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-custom mr-10 mb-3">ما را دنبال کنید</h3>
+          <ul class="space-y-2 list-none">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-building h-full text-xl mx-1"></i>
+              <p class="text-gray-400 font-custom text-justify text-base">
+                دفتر ،17 طبقه03، برج عقیق 1707، خلیج تجاری U.A.E.
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-phone mx-1"></i>
+              <p class="text-gray-400 text-base font-custom">971568842000+</p>
+            </div>
+            <div class="flex gap-20">
+              <li class="text-gray-400 text-xl hover:text-white transition">
+                <i class="fa-brands fa-facebook"></i>
+              </li>
+              <li class="text-gray-400 text-xl hover:text-white transition">
+                <i class="fa-brands fa-youtube"></i>
+              </li>
+              <li class="text-gray-400 text-xl hover:text-white transition">
+                <i class="fa-brands fa-instagram"></i>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="text-center font-custom text-lg text-gray-500 mt-10 border-t border-gray-700 pt-5"
+      >
+        © 2025 تمامی حقوق محفوظ است.
+      </div>
+    </footer>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const closeMenuBtn = document.getElementById("close-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileDropdownBtn = document.getElementById("mobile-dropdown-btn");
+      const mobileDropdown = document.getElementById("mobile-dropdown");
+      const body = document.body;
+
+      // باز کردن منوی موبایل و غیرفعال کردن اسکرول صفحه
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+        body.style.overflow = "hidden"; // غیرفعال کردن اسکرول هنگام باز شدن منو
+      });
+
+      // بستن منوی موبایل و فعال کردن اسکرول صفحه
+      closeMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        body.style.overflow = "auto"; // فعال کردن اسکرول بعد از بسته شدن منو
+      });
+
+      // باز و بسته کردن منوی کشویی در موبایل
+      mobileDropdownBtn.addEventListener("click", () => {
+        mobileDropdown.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
