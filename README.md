@@ -1,0 +1,2 @@
+# amlak-project-tailwind
+ 
